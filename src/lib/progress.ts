@@ -7,17 +7,19 @@ import { lessonKey } from "./content";
 export type LessonProgress = { seen: string[]; quiz?: number; quizTotal?: number };
 type Store = Record<string, LessonProgress>;
 
-const KEY = "lughati-progress-v1";
+// Saved on each device separately (localStorage), so every phone/computer has its own score.
+// A fresh key means everyone starts this version at 0%.
+const KEY = "arabic100-progress";
+const OLD_KEY = "lughati-progress-v1";
 const listeners = new Set<() => void>();
 let cache: Store | null = null;
 const EMPTY: Store = {};
 
-// Progress lasts only for the current visit (this tab): every new visit starts from 0%.
 function read(): Store {
   if (cache) return cache;
   try {
-    localStorage.removeItem(KEY); // clear progress saved by earlier versions of the site
-    cache = JSON.parse(sessionStorage.getItem(KEY) || "{}") as Store;
+    localStorage.removeItem(OLD_KEY);
+    cache = JSON.parse(localStorage.getItem(KEY) || "{}") as Store;
   } catch {
     cache = {};
   }
@@ -27,7 +29,7 @@ function read(): Store {
 function write(next: Store) {
   cache = next;
   try {
-    sessionStorage.setItem(KEY, JSON.stringify(next));
+    localStorage.setItem(KEY, JSON.stringify(next));
   } catch {
     /* storage may be unavailable (private mode) — progress stays in memory */
   }
@@ -36,8 +38,17 @@ function write(next: Store) {
 
 function subscribe(cb: () => void) {
   listeners.add(cb);
+  // keep other open tabs on the same device in sync
+  const onStorage = (e: StorageEvent) => {
+    if (e.key === KEY) {
+      cache = null;
+      cb();
+    }
+  };
+  window.addEventListener("storage", onStorage);
   return () => {
     listeners.delete(cb);
+    window.removeEventListener("storage", onStorage);
   };
 }
 

@@ -1,19 +1,12 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import SplitText from "./SplitText";
 import Magnetic from "./Magnetic";
+import HeroOrnament from "./HeroOrnament";
 
-const BookScene = dynamic(() => import("./three/BookScene"), {
-  ssr: false,
-  loading: () => (
-    <div className="absolute inset-0 grid place-items-center">
-      <div className="h-40 w-56 animate-pulse rounded-lg bg-emerald-deep/30 blur-2xl" />
-    </div>
-  ),
-});
+
 
 export default function Hero() {
   const reduce = !!useReducedMotion();
@@ -67,9 +60,7 @@ export default function Hero() {
           style={reduce ? undefined : { y: sceneY, scale: sceneScale }}
           className="relative order-1 h-[52svh] min-h-[340px] lg:order-2 lg:h-[82svh]"
         >
-          <div className="absolute -inset-x-[12%] -inset-y-[6%]">
-            <BookScene reduced={reduce} />
-          </div>
+          <HeroOrnament />
         </motion.div>
       </div>
 

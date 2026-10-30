@@ -1,18 +1,18 @@
 1:"$Sreact.fragment"
-2:"/a/_next/static/chunks/42onvq6nokjl2.js"
-3:"/a/_next/static/chunks/3-twzac_o2ewu.js"
-4:"/a/_next/static/chunks/25z4nh8b33l7u.js"
-5:"/a/_next/static/chunks/3a36rxw91hbu9.js"
+2:"/A/_next/static/chunks/42onvq6nokjl2.js"
+3:"/A/_next/static/chunks/3-twzac_o2ewu.js"
+4:"/A/_next/static/chunks/418x8eys-lgxa.js"
+5:"/A/_next/static/chunks/3a36rxw91hbu9.js"
 6:I[84834,["$2","$3","$4","$5"],"default"]
 7:I[39756,["$2","$3","$4","$5"],"default"]
-8:"/a/_next/static/chunks/3-mx49bi4kt-p.js"
+8:"/A/_next/static/chunks/3-mx49bi4kt-p.js"
 9:I[16868,["$2","$3","$4","$5","$8"],"default"]
 a:I[37457,["$2","$3","$4","$5"],"default"]
 b:I[22016,["$2","$3","$4","$5"],""]
 c:I[13642,["$2","$3","$4","$5"],"default"]
-15:"/a/_next/static/chunks/2rrhgcm-q8eo8.js"
-16:"/a/_next/static/chunks/3vasufqp98wf8.js"
-17:"/a/_next/static/chunks/43nj00pqzz8ba.js"
+15:"/A/_next/static/chunks/2rrhgcm-q8eo8.js"
+16:"/A/_next/static/chunks/3vasufqp98wf8.js"
+17:"/A/_next/static/chunks/43nj00pqzz8ba.js"
 18:I[16353,["$2","$3","$4","$5","$15","$16","$17"],"default"]
 19:I[97367,["$2","$3","$4","$5"],"OutletBoundary"]
 1a:"$Sreact.suspense"
@@ -21,14 +21,14 @@ c:I[13642,["$2","$3","$4","$5"],"default"]
 1f:"MetadataBoundary"
 20:I[97367,["$2","$3","$4","$5"],"$1f"]
 21:I[27201,["$2","$3","$4","$5"],"IconMark"]
-:HL["/a/_next/static/chunks/122hdn6orarlg.css","style"]
+:HL["/A/_next/static/chunks/122hdn6orarlg.css","style"]
 e:X
 11:X
 11:C
-14:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[[["$","$L18","texts/al-imran",{"unitSlug":"texts","lessonSlug":"al-imran"}]],[["$","script","script-0",{"src":"/a/_next/static/chunks/2rrhgcm-q8eo8.js","async":true}],["$","script","script-1",{"src":"/a/_next/static/chunks/3vasufqp98wf8.js","async":true}],["$","script","script-2",{"src":"/a/_next/static/chunks/43nj00pqzz8ba.js","async":true}]],["$","$L19",null,{"children":["$","$1a",null,{"name":"Next.MetadataOutlet","children":"$@1b"}]}]]}],"p":"$@1c","v":null,"s":"$e"}}]]
+14:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[[["$","$L18","texts/al-imran",{"unitSlug":"texts","lessonSlug":"al-imran"}]],[["$","script","script-0",{"src":"/A/_next/static/chunks/2rrhgcm-q8eo8.js","async":true}],["$","script","script-1",{"src":"/A/_next/static/chunks/3vasufqp98wf8.js","async":true}],["$","script","script-2",{"src":"/A/_next/static/chunks/43nj00pqzz8ba.js","async":true}]],["$","$L19",null,{"children":["$","$1a",null,{"name":"Next.MetadataOutlet","children":"$@1b"}]}]]}],"p":"$@1c","v":null,"s":"$e"}}]]
 12:[["children",{"s":{"n":"lesson","t":"d","k":"al-imran","s":[]},"h":96,"d":{"r":["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","template":["$","$La",null,{}]}]]}],"p":"$@13","v":"$11","s":"$e"},"c":"$Q14"}]]
 f:[["children",{"s":{"n":"unit","t":"d","k":"texts","s":[]},"h":96,"d":{"r":["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","template":["$","$La",null,{}]}]]}],"p":"$@10","v":"$11","s":"$e"},"c":"$Q12"}]]
-0:{"t":{"t":{"s":"","h":80,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/a/_next/static/chunks/122hdn6orarlg.css","precedence":"next"}],["$","script","script-0",{"src":"/a/_next/static/chunks/42onvq6nokjl2.js","async":true}],["$","script","script-1",{"src":"/a/_next/static/chunks/3-twzac_o2ewu.js","async":true}],["$","script","script-2",{"src":"/a/_next/static/chunks/25z4nh8b33l7u.js","async":true}],["$","script","script-3",{"src":"/a/_next/static/chunks/3a36rxw91hbu9.js","async":true}]],["$","html",null,{"lang":"ar","dir":"rtl","className":"U_dIuq_variable _6VvGiG_variable wz-SVG_variable","children":["$","body",null,{"className":"grain antialiased","children":[["$","a",null,{"href":"#main","className":"sr-only focus:not-sr-only focus:fixed focus:right-4 focus:top-4 focus:z-[70] focus:rounded-lg focus:bg-lime focus:px-4 focus:py-2 focus:text-ink","children":"تخطَّ إلى المحتوى"}],["$","$L6",null,{}],["$","main",null,{"id":"main","children":["$","$L7",null,{"parallelRouterKey":"children","template":["$","$L9",null,{"children":["$","$La",null,{}]}],"templateStyles":[],"templateScripts":[["$","script","script-0",{"src":"/a/_next/static/chunks/3-mx49bi4kt-p.js","async":true}]],"notFound":[["$","div",null,{"className":"grid min-h-[80svh] place-items-center px-4 pt-[var(--nav-h)] text-center","children":["$","div",null,{"children":[["$","p",null,{"className":"font-display text-[10rem] font-black leading-none text-emerald-deep","children":"؟"}],["$","h1",null,{"className":"font-display text-4xl font-black","children":"الصفحة غير موجودة"}],["$","$Lb",null,{"href":"/","className":"mt-8 inline-block rounded-full bg-lime px-8 py-3 font-display font-black text-ink","children":"العودة إلى الرئيسة"}]]}]}],[]]}]}],["$","$Lc",null,{}]]}]}]]}],"p":"$@d","v":null,"s":"$e"},"c":"$Qf"},"h":{"r":["$","$1","h",{"children":[null,["$","$L1e",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#0B0F0C"}]]}],["$","$L20",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1a",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"من سورة آل عمران — النصوص"}],["$","meta","1",{"name":"description","content":"منصة تعليمية تفاعلية لمهارات اللغة العربية للصفين العاشر والحادي عشر: الكتابة، والبلاغة، والقواعد والإملاء، والنصوص."}],["$","link","2",{"rel":"icon","href":"/a/icon.png?icon.1tjsw_v_tgnt3.png","sizes":"320x320","type":"image/png"}],["$","$L21","3",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@22","v":null,"s":"$e"}},"a":"$@23","u":"$@24","b":"aO2CqJz1dFXjQ7bjx7SUq"}
+0:{"t":{"t":{"s":"","h":80,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/A/_next/static/chunks/122hdn6orarlg.css","precedence":"next"}],["$","script","script-0",{"src":"/A/_next/static/chunks/42onvq6nokjl2.js","async":true}],["$","script","script-1",{"src":"/A/_next/static/chunks/3-twzac_o2ewu.js","async":true}],["$","script","script-2",{"src":"/A/_next/static/chunks/418x8eys-lgxa.js","async":true}],["$","script","script-3",{"src":"/A/_next/static/chunks/3a36rxw91hbu9.js","async":true}]],["$","html",null,{"lang":"ar","dir":"rtl","className":"U_dIuq_variable _6VvGiG_variable wz-SVG_variable","children":["$","body",null,{"className":"grain antialiased","children":[["$","a",null,{"href":"#main","className":"sr-only focus:not-sr-only focus:fixed focus:right-4 focus:top-4 focus:z-[70] focus:rounded-lg focus:bg-lime focus:px-4 focus:py-2 focus:text-ink","children":"تخطَّ إلى المحتوى"}],["$","$L6",null,{}],["$","main",null,{"id":"main","children":["$","$L7",null,{"parallelRouterKey":"children","template":["$","$L9",null,{"children":["$","$La",null,{}]}],"templateStyles":[],"templateScripts":[["$","script","script-0",{"src":"/A/_next/static/chunks/3-mx49bi4kt-p.js","async":true}]],"notFound":[["$","div",null,{"className":"grid min-h-[80svh] place-items-center px-4 pt-[var(--nav-h)] text-center","children":["$","div",null,{"children":[["$","p",null,{"className":"font-display text-[10rem] font-black leading-none text-emerald-deep","children":"؟"}],["$","h1",null,{"className":"font-display text-4xl font-black","children":"الصفحة غير موجودة"}],["$","$Lb",null,{"href":"/","className":"mt-8 inline-block rounded-full bg-lime px-8 py-3 font-display font-black text-ink","children":"العودة إلى الرئيسة"}]]}]}],[]]}]}],["$","$Lc",null,{}]]}]}]]}],"p":"$@d","v":null,"s":"$e"},"c":"$Qf"},"h":{"r":["$","$1","h",{"children":[null,["$","$L1e",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#0B0F0C"}]]}],["$","$L20",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1a",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"من سورة آل عمران — النصوص"}],["$","meta","1",{"name":"description","content":"منصة تعليمية تفاعلية لمهارات اللغة العربية للصفين العاشر والحادي عشر: الكتابة، والبلاغة، والقواعد والإملاء، والنصوص."}],["$","link","2",{"rel":"icon","href":"/A/icon.png?icon.1tjsw_v_tgnt3.png","sizes":"320x320","type":"image/png"}],["$","$L21","3",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@22","v":null,"s":"$e"}},"a":"$@23","u":"$@24","b":"lD7gE0fFVbNXgM10TwMUx"}
 1b:null
 e:300
 24:true

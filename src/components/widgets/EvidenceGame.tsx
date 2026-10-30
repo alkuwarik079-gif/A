@@ -6,9 +6,9 @@ import { useMemo, useState } from "react";
 type Kind = "naqli" | "waqii" | "mantiqi";
 
 const BINS: { kind: Kind; label: string; hint: string; color: string }[] = [
-  { kind: "naqli", label: "نقلي", hint: "آية، حديث، شعر، مثل، قول", color: "#38BDF8" },
-  { kind: "waqii", label: "واقعي", hint: "إحصاءات، تجارب، أحداث", color: "#F59E0B" },
-  { kind: "mantiqi", label: "منطقي", hint: "استنتاج، قياس، سبب ونتيجة", color: "#C084FC" },
+  { kind: "naqli", label: "نقلي", hint: "آية، حديث، شعر، مثل، قول", color: "#B8925A" },
+  { kind: "waqii", label: "واقعي", hint: "إحصاءات، تجارب، أحداث", color: "#7D6A60" },
+  { kind: "mantiqi", label: "منطقي", hint: "استنتاج، قياس، سبب ونتيجة", color: "#5C0E25" },
 ];
 
 const ITEMS: { id: number; text: string; kind: Kind }[] = [
@@ -85,7 +85,7 @@ export default function EvidenceGame() {
                   wrong?.id === it.id
                     ? "border-rose bg-rose/10"
                     : selected === it.id
-                    ? "border-lime bg-lime/10 shadow-[0_0_30px_-8px_#A3E635]"
+                    ? "border-lime bg-lime/10 shadow-[0_0_30px_-8px_#8A1538]"
                     : "border-cream/15 bg-ink hover:border-leaf/60"
                 }`}
               >

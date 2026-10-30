@@ -49,7 +49,7 @@ function Picker({ title, value, onChange }: { title: string; value: V; onChange:
             aria-pressed={value === o.v}
             onClick={() => onChange(o.v)}
             className={`rounded-2xl border py-3 font-display transition-all ${
-              value === o.v ? "border-lime bg-lime text-ink shadow-[0_0_30px_-8px_#A3E635]" : "border-cream/15 hover:border-leaf/60"
+              value === o.v ? "border-lime bg-lime text-ink shadow-[0_0_30px_-8px_#8A1538]" : "border-cream/15 hover:border-leaf/60"
             }`}
           >
             <span className="block text-2xl leading-none">{o.mark}</span>
@@ -132,7 +132,7 @@ export default function HamzaCalc() {
                 {ex && (
                   <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }} className="mt-4 font-body text-4xl font-bold text-ink">
                     {ex[0]}
-                    <span className="text-leaf [text-shadow:0_0_18px_rgba(34,197,94,.5)]">{ex[1]}</span>
+                    <span className="text-leaf [text-shadow:0_0_18px_rgba(138,21,56,0.25)]">{ex[1]}</span>
                     {ex[2]}
                   </motion.p>
                 )}

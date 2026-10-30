@@ -44,7 +44,7 @@ function paperTexture(fontFamily: string, seed: number) {
   }
   g.putImageData(img, 0, 0);
   // ornamental frame
-  g.strokeStyle = "rgba(15,81,50,.55)";
+  g.strokeStyle = "rgba(138,21,56,.55)";
   g.lineWidth = 3;
   g.strokeRect(46, 46, c.width - 92, c.height - 92);
   g.lineWidth = 1;
@@ -52,10 +52,10 @@ function paperTexture(fontFamily: string, seed: number) {
   // header
   g.direction = "rtl";
   g.textAlign = "center";
-  g.fillStyle = "#0F5132";
+  g.fillStyle = "#8A1538";
   g.font = `700 64px ${fontFamily}`;
   g.fillText(seed % 2 ? "عربي١٠٠" : "البيان", c.width / 2, 170);
-  g.fillStyle = "rgba(15,81,50,.8)";
+  g.fillStyle = "rgba(138,21,56,.8)";
   g.fillText("۞", c.width / 2, 240);
   // body text
   g.textAlign = "right";
@@ -89,9 +89,9 @@ function glyphTexture(ch: string, fontFamily: string) {
   g.textBaseline = "middle";
   g.direction = "rtl";
   g.font = `800 76px ${fontFamily}`;
-  g.shadowColor = "#22C55E";
-  g.shadowBlur = 22;
-  g.fillStyle = "#D9F99D";
+  g.shadowColor = "rgba(138,21,56,.35)";
+  g.shadowBlur = 10;
+  g.fillStyle = "#8A1538";
   g.fillText(ch, 64, 68);
   g.shadowBlur = 6;
   g.fillText(ch, 64, 68);
@@ -119,12 +119,12 @@ function Half({ side, map }: { side: 1 | -1; map: THREE.Texture }) {
       {/* leather cover */}
       <mesh position={[side * (W / 2 + 0.03), 0, -0.11]} castShadow>
         <boxGeometry args={[W + 0.1, H + 0.12, 0.04]} />
-        <meshStandardMaterial color="#0C3B25" roughness={0.55} metalness={0.15} />
+        <meshStandardMaterial color="#7A1231" roughness={0.5} metalness={0.15} />
       </mesh>
       {/* gilt edge line */}
       <mesh position={[side * (W + 0.075), 0, -0.088]}>
         <boxGeometry args={[0.012, H + 0.12, 0.005]} />
-        <meshStandardMaterial color="#A3E635" emissive="#22C55E" emissiveIntensity={0.6} />
+        <meshStandardMaterial color="#D4AF37" metalness={0.8} roughness={0.3} />
       </mesh>
     </group>
   );
@@ -218,7 +218,7 @@ function Book({ font, reduced }: { font: string; reduced: boolean }) {
       {/* spine */}
       <mesh position={[0, 0, -0.1]} rotation={[0, 0, 0]}>
         <cylinderGeometry args={[0.07, 0.07, H + 0.12, 16, 1, false, Math.PI / 2, Math.PI]} />
-        <meshStandardMaterial color="#0A2E1D" roughness={0.5} />
+        <meshStandardMaterial color="#5C0E25" roughness={0.5} />
       </mesh>
       <FlutterPage map={maps[2]} phase={0} speed={0.55} reduced={reduced} />
       {!reduced && <FlutterPage map={maps[0]} phase={2.1} speed={0.47} reduced={reduced} />}
@@ -258,7 +258,7 @@ function Glyphs({ font, reduced, count = 46 }: { font: string; reduced: boolean;
       if (it.y > 3.4) it.y = -3.4;
       s.position.set(it.x + Math.sin(t * 0.4 + it.sway) * 0.25, it.y, it.z);
       (s.material as THREE.SpriteMaterial).rotation = Math.sin(t * 0.3 + it.sway) * 0.4;
-      (s.material as THREE.SpriteMaterial).opacity = 0.35 + 0.45 * Math.sin(Math.PI * ((it.y + 3.4) / 6.8));
+      (s.material as THREE.SpriteMaterial).opacity = 0.2 + 0.4 * Math.sin(Math.PI * ((it.y + 3.4) / 6.8));
     });
   });
 
@@ -275,7 +275,7 @@ function Glyphs({ font, reduced, count = 46 }: { font: string; reduced: boolean;
           position={[it.x, it.y, it.z]}
           scale={[it.s, it.s, it.s]}
         >
-          <spriteMaterial map={textures[it.tex]} transparent depthWrite={false} blending={THREE.AdditiveBlending} opacity={0.6} />
+          <spriteMaterial map={textures[it.tex]} transparent depthWrite={false} opacity={0.6} />
         </sprite>
       ))}
     </group>
@@ -319,8 +319,8 @@ export default function BookScene({ reduced }: { reduced: boolean }) {
           camera={{ position: [0, 0.5, 6.6], fov: 38 }}
           gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
         >
-          <ambientLight intensity={0.35} color="#F5F1E6" />
-          <hemisphereLight args={["#F5F1E6", "#0B0F0C", 0.35]} />
+          <ambientLight intensity={0.55} color="#FFFFFF" />
+          <hemisphereLight args={["#FFFFFF", "#F3E6EA", 0.45]} />
           <directionalLight
             position={[3, 5, 4]}
             intensity={2.1}
@@ -329,13 +329,13 @@ export default function BookScene({ reduced }: { reduced: boolean }) {
             shadow-mapSize={[1024, 1024]}
             shadow-bias={-0.0004}
           />
-          <pointLight position={[-3, 1, -2]} intensity={14} color="#22C55E" distance={10} />
-          <pointLight position={[2.5, -1.5, 2]} intensity={5} color="#A3E635" distance={8} />
+          <pointLight position={[-3, 1, -2]} intensity={8} color="#E8B4C2" distance={10} />
+          <pointLight position={[2.5, -1.5, 2]} intensity={3} color="#FFFFFF" distance={8} />
           <Float speed={reduced ? 0 : 1.2} rotationIntensity={reduced ? 0 : 0.15} floatIntensity={reduced ? 0 : 0.5}>
             <Book font={font} reduced={reduced} />
           </Float>
           <Glyphs font={font} reduced={reduced} />
-          <ContactShadows position={[0, -1.7, 0]} opacity={0.55} scale={9} blur={2.6} far={3} color="#000" />
+          <ContactShadows position={[0, -1.7, 0]} opacity={0.25} scale={9} blur={2.8} far={3} color="#5C0E25" />
         </Canvas>
       )}
     </div>

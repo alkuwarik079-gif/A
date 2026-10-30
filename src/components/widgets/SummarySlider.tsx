@@ -38,7 +38,7 @@ export default function SummarySlider() {
 
       <div
         ref={box}
-        className="relative grid touch-pan-y select-none overflow-hidden rounded-[1.75rem] shadow-[0_40px_100px_-40px_rgba(0,0,0,.9)]"
+        className="relative grid touch-pan-y select-none overflow-hidden rounded-[1.75rem] shadow-[0_40px_100px_-40px_rgba(92,14,37,.22)]"
         onPointerDown={(e) => {
           (e.target as HTMLElement).setPointerCapture?.(e.pointerId);
           drag(e.clientX);
@@ -67,8 +67,8 @@ export default function SummarySlider() {
           </div>
         </div>
         {/* handle */}
-        <div className="pointer-events-none absolute inset-y-0 w-0.5 bg-lime shadow-[0_0_20px_#A3E635]" style={{ right: `${v}%` }}>
-          <span className="absolute top-1/2 grid h-12 w-12 -translate-y-1/2 translate-x-1/2 place-items-center rounded-full bg-lime font-display font-black text-ink shadow-[0_0_30px_#22C55E]" style={{ right: 0 }}>
+        <div className="pointer-events-none absolute inset-y-0 w-0.5 bg-lime shadow-[0_0_20px_#8A1538]" style={{ right: `${v}%` }}>
+          <span className="absolute top-1/2 grid h-12 w-12 -translate-y-1/2 translate-x-1/2 place-items-center rounded-full bg-lime font-display font-black text-ink shadow-[0_0_30px_#A8405C]" style={{ right: 0 }}>
             ⇆
           </span>
         </div>
@@ -82,7 +82,7 @@ export default function SummarySlider() {
           max={100}
           value={v}
           onChange={(e) => setV(Number(e.target.value))}
-          className="flex-1 accent-[#A3E635]"
+          className="flex-1 accent-[#8A1538]"
           aria-label="مقدار عرض النص الأصلي مقابل الملخص"
         />
         <span>قبل</span>

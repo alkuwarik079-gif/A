@@ -26,7 +26,7 @@ export default function HighlightDoc({ title, legend, paragraphs, mode = "color"
 
   return (
     <div className="grid gap-6 lg:grid-cols-[1fr_260px]">
-      <div className="paper relative overflow-hidden rounded-[1.75rem] p-6 shadow-[0_40px_100px_-40px_rgba(0,0,0,.9)] sm:p-10">
+      <div className="paper relative overflow-hidden rounded-[1.75rem] p-6 shadow-[0_40px_100px_-40px_rgba(92,14,37,.22)] sm:p-10">
         {title && <h4 className="mb-6 text-center font-display text-2xl font-black text-emerald-deep sm:text-3xl">{title}</h4>}
         <div className="space-y-5 text-[1.15rem] leading-[2.3] text-ink sm:text-xl">
           {paragraphs.map((p, pi) => (

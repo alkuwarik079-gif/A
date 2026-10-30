@@ -96,12 +96,12 @@ export default function RhetoricTree() {
           width={w}
           height={44}
           rx={22}
-          fill={on ? "#A3E635" : level === 0 ? "#0F5132" : "#121914"}
-          stroke={on ? "#A3E635" : level === 2 ? "rgba(245,241,230,.2)" : "#22C55E"}
+          fill={on ? "#8A1538" : level === 0 ? "#F4E7EB" : "#FCF9F8"}
+          stroke={on ? "#8A1538" : level === 2 ? "rgba(42,16,24,.2)" : "#A8405C"}
           strokeWidth={1.5}
-          style={{ filter: on ? "drop-shadow(0 0 14px #22C55E)" : undefined, transition: "fill .3s" }}
+          style={{ filter: on ? "drop-shadow(0 0 14px #A8405C)" : undefined, transition: "fill .3s" }}
         />
-        <text x={x} y={y + 6} textAnchor="middle" direction="rtl" fontFamily="var(--font-display)" fontWeight={800} fontSize={level === 0 ? 20 : level === 1 ? 17 : 15} fill={on ? "#0B0F0C" : "#F5F1E6"}>
+        <text x={x} y={y + 6} textAnchor="middle" direction="rtl" fontFamily="var(--font-display)" fontWeight={800} fontSize={level === 0 ? 20 : level === 1 ? 17 : 15} fill={on ? "#FFFFFF" : "#2A1018"}>
           {n.label}
         </text>
       </motion.g>
@@ -118,7 +118,7 @@ export default function RhetoricTree() {
               <motion.path
                 d={curve(500, Y.root + 22, BRANCH_X[b.id], Y.branch - 22)}
                 fill="none"
-                stroke="#22C55E"
+                stroke="#A8405C"
                 strokeWidth={2}
                 initial={{ pathLength: 0 }}
                 animate={show ? { pathLength: 1 } : {}}
@@ -129,7 +129,7 @@ export default function RhetoricTree() {
                   key={l.id}
                   d={curve(BRANCH_X[b.id], Y.branch + 22, LEAF_X[l.id], Y.leaf - 22)}
                   fill="none"
-                  stroke="rgba(163,230,53,.55)"
+                  stroke="rgba(138,21,56,.55)"
                   strokeWidth={1.5}
                   initial={{ pathLength: 0 }}
                   animate={show ? { pathLength: 1 } : {}}

@@ -47,7 +47,7 @@ function UnitCard({ unit, index }: { unit: Unit; index: number }) {
             aria-hidden
             className="pointer-events-none absolute -inset-px opacity-0 transition-opacity duration-500 group-hover:opacity-100"
             style={{
-              background: useTransform([glowX, glowY], ([x, y]) => `radial-gradient(400px circle at ${x} ${y}, rgba(34,197,94,.22), transparent 60%)`),
+              background: useTransform([glowX, glowY], ([x, y]) => `radial-gradient(400px circle at ${x} ${y}, rgba(138,21,56,0.11), transparent 60%)`),
             }}
           />
           <div className="pattern-girih pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-40" />

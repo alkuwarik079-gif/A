@@ -40,7 +40,7 @@ function BlockView({ b }: { b: Block }) {
     }
     case "example":
       return (
-        <figure className="paper relative max-w-4xl overflow-hidden rounded-[1.75rem] p-7 shadow-[0_30px_80px_-30px_rgba(0,0,0,.8)] sm:p-10">
+        <figure className="paper relative max-w-4xl overflow-hidden rounded-[1.75rem] p-7 shadow-[0_30px_80px_-30px_rgba(92,14,37,.22)] sm:p-10">
           <span aria-hidden className="absolute -top-6 left-6 font-display text-[9rem] leading-none text-emerald-deep/15">
             ”
           </span>

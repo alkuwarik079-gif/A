@@ -44,7 +44,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.3, duration: 0.9 }}
-            className="mt-8 max-w-lg text-lg leading-loose text-cream/75 sm:mt-12 sm:text-xl"
+            className="mt-10 max-w-lg text-lg leading-loose text-cream/75 sm:mt-16 sm:text-xl"
           >
             رحلةٌ من الحرف إلى النص: اكتب بثقة، وتذوّق البيان، وأتقن القواعد والإملاء، واقرأ بفهمٍ واستيعاب.
           </motion.p>
@@ -52,7 +52,7 @@ export default function Hero() {
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.6 }} className="mt-10 flex flex-wrap items-center gap-4">
             <Magnetic
               href="/writing"
-              className="rounded-full bg-lime px-9 py-4 font-display text-lg font-black text-ink shadow-[0_0_0_0_#22C55E] transition-shadow duration-500 hover:shadow-[0_0_60px_-5px_#22C55E]"
+              className="rounded-full bg-lime px-9 py-4 font-display text-lg font-black text-ink shadow-[0_0_0_0_#A8405C] transition-shadow duration-500 hover:shadow-[0_0_60px_-5px_#A8405C]"
             >
               ابدأ التعلم
               <span aria-hidden className="transition-transform duration-500 group-hover:-translate-x-1.5">←</span>

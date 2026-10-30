@@ -5,14 +5,14 @@ import HighlightDoc, { type Legend, type Seg } from "./HighlightDoc";
 /* ───── Model essay: الذكاء الاصطناعي ───── */
 
 const essayLegend: Legend = [
-  { key: "tamheed", label: "تمهيد", color: "#0EA5E9" },
-  { key: "topic", label: "تحديد الموضوع", color: "#8B5CF6" },
-  { key: "points", label: "النقاط الرئيسية", color: "#D946EF" },
-  { key: "question", label: "سؤال ختامي", color: "#F59E0B" },
-  { key: "idea", label: "فكرة (العرض)", color: "#16A34A" },
-  { key: "evidence", label: "دليل (العرض)", color: "#65A30D" },
-  { key: "summary", label: "ملخص (الخاتمة)", color: "#E11D48" },
-  { key: "advice", label: "نصيحة / رأي", color: "#EA580C" },
+  { key: "tamheed", label: "تمهيد", color: "#8A1538" },
+  { key: "topic", label: "تحديد الموضوع", color: "#B8925A" },
+  { key: "points", label: "النقاط الرئيسية", color: "#C26B85" },
+  { key: "question", label: "سؤال ختامي", color: "#7D6A60" },
+  { key: "idea", label: "فكرة (العرض)", color: "#5C0E25" },
+  { key: "evidence", label: "دليل (العرض)", color: "#C9A27E" },
+  { key: "summary", label: "ملخص (الخاتمة)", color: "#9E5A73" },
+  { key: "advice", label: "نصيحة / رأي", color: "#D9A066" },
 ];
 
 const essay: Seg[][] = [
@@ -47,10 +47,10 @@ export function EssayModel() {
 /* ───── Annotated paragraph: القراءة ───── */
 
 const paraLegend: Legend = [
-  { key: "opening", label: "الجملة الافتتاحية", color: "#8B5CF6" },
-  { key: "support", label: "الجمل الداعمة", color: "#0EA5E9" },
-  { key: "evidence", label: "الأدلة", color: "#16A34A" },
-  { key: "closing", label: "الجملة الختامية", color: "#E11D48" },
+  { key: "opening", label: "الجملة الافتتاحية", color: "#B8925A" },
+  { key: "support", label: "الجمل الداعمة", color: "#8A1538" },
+  { key: "evidence", label: "الأدلة", color: "#5C0E25" },
+  { key: "closing", label: "الجملة الختامية", color: "#9E5A73" },
 ];
 
 const para: Seg[][] = [
@@ -70,11 +70,11 @@ export function ParagraphAnnotate() {
 /* ───── Model commentary ───── */
 
 const comLegend: Legend = [
-  { key: "type", label: "١ · نوع العبارة", color: "#0EA5E9" },
-  { key: "explain", label: "٢ · الشرح", color: "#8B5CF6" },
-  { key: "opinion", label: "٣ · الرأي", color: "#F59E0B" },
-  { key: "evidence", label: "٤ · الأدلة", color: "#16A34A" },
-  { key: "end", label: "٥ · الخاتمة", color: "#E11D48" },
+  { key: "type", label: "١ · نوع العبارة", color: "#8A1538" },
+  { key: "explain", label: "٢ · الشرح", color: "#B8925A" },
+  { key: "opinion", label: "٣ · الرأي", color: "#7D6A60" },
+  { key: "evidence", label: "٤ · الأدلة", color: "#5C0E25" },
+  { key: "end", label: "٥ · الخاتمة", color: "#9E5A73" },
 ];
 
 const commentary: Seg[][] = [

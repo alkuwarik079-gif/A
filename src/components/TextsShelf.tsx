@@ -56,11 +56,11 @@ function Book({ m, i, pct }: { m: Meta; i: number; pct: number }) {
             className="absolute inset-0 flex flex-col items-center justify-between overflow-hidden rounded-[4px] py-5 shadow-[inset_-8px_0_14px_rgba(0,0,0,.35),inset_8px_0_10px_rgba(255,255,255,.06)]"
             style={{ background: `linear-gradient(90deg, ${m.spine} 0%, color-mix(in srgb, ${m.spine} 70%, white) 50%, ${m.spine} 100%)` }}
           >
-            <span className="h-px w-3/4 bg-lime/60" />
-            <span className="font-kufi text-lg text-lime">۞</span>
-            <span className="font-display text-[1.35rem] font-black text-cream [writing-mode:vertical-rl]">{m.title}</span>
-            <span className="font-display text-[11px] text-cream/60 [writing-mode:vertical-rl]">{m.author.split("—")[0]}</span>
-            <span className="h-px w-3/4 bg-lime/60" />
+            <span className="h-px w-3/4 bg-[#E9D3A6]/70" />
+            <span className="font-kufi text-lg text-[#E9D3A6]">۞</span>
+            <span className="font-display text-[1.35rem] font-black text-white [writing-mode:vertical-rl]">{m.title}</span>
+            <span className="font-display text-[11px] text-white/70 [writing-mode:vertical-rl]">{m.author.split("—")[0]}</span>
+            <span className="h-px w-3/4 bg-[#E9D3A6]/70" />
             {pct > 0 && <span className="absolute inset-x-0 bottom-0 h-1 bg-lime" style={{ width: `${pct}%` }} />}
           </span>
           {/* front cover, hinged on the spine's left edge and folded back into the shelf */}
@@ -84,9 +84,9 @@ function Book({ m, i, pct }: { m: Meta; i: number; pct: number }) {
                 transition: "transform .65s cubic-bezier(.65,0,.35,1)",
               }}
             >
-              <span className="pattern-khatam absolute inset-3 rounded border border-lime/40 opacity-40" />
-              <span className="relative font-display text-3xl font-black text-cream">{m.title}</span>
-              <span className="relative mt-3 text-sm text-lime">{m.author}</span>
+              <span className="pattern-khatam absolute inset-3 rounded border border-[#E9D3A6]/60 opacity-30" />
+              <span className="relative font-display text-3xl font-black text-white">{m.title}</span>
+              <span className="relative mt-3 text-sm text-[#E9D3A6]">{m.author}</span>
             </span>
           </span>
         </span>
@@ -135,7 +135,7 @@ export default function TextsShelf() {
         </div>
       </div>
       {/* shelf plank */}
-      <div aria-hidden className="relative mx-auto h-6 max-w-[96vw] rounded-sm bg-gradient-to-b from-[#3B2A1A] to-[#1F150C] shadow-[0_30px_60px_-10px_rgba(0,0,0,.9),0_-1px_0_rgba(255,255,255,.08)_inset]" />
+      <div aria-hidden className="relative mx-auto h-6 max-w-[96vw] rounded-sm bg-gradient-to-b from-[#3B2A1A] to-[#1F150C] shadow-[0_30px_60px_-10px_rgba(92,14,37,.22),0_-1px_0_rgba(255,255,255,.08)_inset]" />
       <div aria-hidden className="mx-auto h-24 max-w-5xl bg-leaf/10 blur-3xl" />
 
       {/* accessible list */}

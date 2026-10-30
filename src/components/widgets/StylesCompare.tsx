@@ -9,21 +9,21 @@ const STYLES: { name: string; tag: string; color: string; parts: Part[]; traits:
   {
     name: "العلمي",
     tag: "يخاطب العقل",
-    color: "#38BDF8",
+    color: "#B8925A",
     parts: ["الشمس ", ["نجمٌ متوسط الحجم"], " يقع في مركز المجموعة الشمسية، ويبعد عن الأرض نحو ", ["150 مليون كيلومتر"], "، وتبلغ درجة حرارة سطحها قرابة ", ["5500 درجة مئوية"], "، وتنتج طاقتها من ", ["تفاعلات الاندماج النووي"], "."],
     traits: ["أرقام دقيقة", "مصطلحات علمية", "لا خيال"],
   },
   {
     name: "الأدبي",
     tag: "يخاطب الوجدان",
-    color: "#FB7185",
+    color: "#C26B85",
     parts: ["أطلّت الشمس من خدرها ", ["عروسًا ذهبية"], "، ", ["تنثر ضفائرها"], " على الحقول، فتستيقظ ", ["الأزهار مبتسمة"], "، وتغسل الدنيا وجهها بنورٍ دافئٍ ", ["كحضن أمٍّ رؤوم"], "."],
     traits: ["تشبيه واستعارة", "تشخيص", "عاطفة"],
   },
   {
     name: "العلمي المتأدب",
     tag: "يجمع بينهما",
-    color: "#A3E635",
+    color: "#8A1538",
     parts: ["الشمس ", ["ذلك الفرن النووي الهائل"], " الذي يتربع في قلب مجموعتنا، ", ["يحوّل الهيدروجين إلى هيليوم"], " في كل ثانية، فيرسل إلينا -على بعد ", ["150 مليون كيلومتر"], "- ", ["دفئًا هو سرّ الحياة"], " على كوكبنا."],
     traits: ["حقيقة + صورة", "اعتدال", "تبسيط"],
   },
@@ -38,7 +38,7 @@ export default function StylesCompare() {
           type="button"
           aria-pressed={reveal}
           onClick={() => setReveal((v) => !v)}
-          className={`rounded-full px-6 py-2.5 font-display font-black transition-all ${reveal ? "bg-lime text-ink shadow-[0_0_40px_-8px_#A3E635]" : "border border-lime/50 text-lime hover:bg-lime/10"}`}
+          className={`rounded-full px-6 py-2.5 font-display font-black transition-all ${reveal ? "bg-lime text-ink shadow-[0_0_40px_-8px_#8A1538]" : "border border-lime/50 text-lime hover:bg-lime/10"}`}
         >
           {reveal ? "إخفاء السمات" : "كشف السمات ✦"}
         </button>

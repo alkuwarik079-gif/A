@@ -14,12 +14,12 @@ function Ring({ value }: { value: number }) {
   const c = 2 * Math.PI * r;
   return (
     <svg width="24" height="24" viewBox="0 0 24 24" className="-rotate-90" aria-hidden>
-      <circle cx="12" cy="12" r={r} stroke="rgba(245,241,230,.15)" strokeWidth="2.5" fill="none" />
+      <circle cx="12" cy="12" r={r} stroke="rgba(42,16,24,.15)" strokeWidth="2.5" fill="none" />
       <circle
         cx="12"
         cy="12"
         r={r}
-        stroke="#A3E635"
+        stroke="#8A1538"
         strokeWidth="2.5"
         fill="none"
         strokeLinecap="round"
@@ -55,7 +55,7 @@ export default function Nav() {
     >
       <nav className="mx-auto flex h-full max-w-7xl items-center justify-between gap-4 px-4 sm:px-6" aria-label="الوحدات">
         <Link href="/" className="group flex items-center gap-2.5" aria-label="الصفحة الرئيسة">
-          <span className="grid h-12 w-12 place-items-center rounded-xl bg-cream p-1 shadow-[0_0_30px_-8px_#22C55E] transition-transform duration-500 group-hover:-rotate-3">
+          <span className="grid h-12 w-12 place-items-center rounded-xl border border-lime/15 bg-white p-1 shadow-[0_0_30px_-8px_#A8405C] transition-transform duration-500 group-hover:-rotate-3">
             <Image src={quLogo} alt="جامعة قطر" priority className="h-full w-auto" />
           </span>
           <span className="font-display text-lg font-black tracking-tight">

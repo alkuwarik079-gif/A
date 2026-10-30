@@ -72,7 +72,7 @@ export default function Quiz({ unit, lesson, questions }: { unit: string; lesson
                       animate={state === "wrong" ? { x: [0, -8, 8, -5, 5, 0] } : {}}
                       className={`flex items-center gap-4 rounded-2xl border px-5 py-4 text-right text-lg transition-all duration-300 ${
                         state === "right"
-                          ? "border-leaf bg-leaf/15 text-cream shadow-[0_0_40px_-10px_#22C55E]"
+                          ? "border-leaf bg-leaf/15 text-cream shadow-[0_0_40px_-10px_#A8405C]"
                           : state === "wrong"
                           ? "border-rose bg-rose/10 text-cream"
                           : state === "dim"
@@ -100,7 +100,7 @@ export default function Quiz({ unit, lesson, questions }: { unit: string; lesson
                       <span className="font-display font-black">{picked === q.answer ? "أحسنت! " : "ليست الإجابة الصحيحة. "}</span>
                       {q.why ?? (picked === q.answer ? "إجابة دقيقة." : `الصواب: ${q.options[q.answer]}`)}
                     </p>
-                    <button type="button" onClick={next} className="rounded-full bg-lime px-7 py-3 font-display font-black text-ink transition-shadow hover:shadow-[0_0_40px_-5px_#A3E635]">
+                    <button type="button" onClick={next} className="rounded-full bg-lime px-7 py-3 font-display font-black text-ink transition-shadow hover:shadow-[0_0_40px_-5px_#8A1538]">
                       {i + 1 < questions.length ? "التالي ←" : "اعرض النتيجة"}
                     </button>
                   </motion.div>

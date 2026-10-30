@@ -18,7 +18,7 @@ export default function Hero() {
   const fade = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
 
   return (
-    <section ref={ref} className="relative min-h-[100svh] overflow-hidden pt-[var(--nav-h)]">
+    <section ref={ref} className="snap-start relative min-h-[100svh] overflow-hidden pt-[var(--nav-h)]">
       {/* backdrop */}
       <div className="pattern-khatam pointer-events-none absolute inset-0 opacity-[0.07] [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)]" />
       <div className="pointer-events-none absolute left-1/2 top-[45%] h-[70vmin] w-[70vmin] -translate-x-1/2 -translate-y-1/2 rounded-full bg-leaf/20 blur-[120px]" />

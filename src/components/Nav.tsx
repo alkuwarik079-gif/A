@@ -49,7 +49,7 @@ export default function Nav() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled ? "border-b border-leaf/15 bg-ink/80 backdrop-blur-xl" : "bg-transparent"
+        scrolled ? "border-b border-leaf/15 bg-ink/95 shadow-[0_1px_0_rgba(138,21,56,.06)]" : "bg-transparent"
       }`}
       style={{ height: "var(--nav-h)" }}
     >

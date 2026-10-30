@@ -107,14 +107,6 @@ export default function TextsShelf() {
     const mm = gsap.matchMedia();
     mm.add("(prefers-reduced-motion: no-preference)", () => {
       gsap.from(".shelf-book", { y: 120, opacity: 0, rotate: -6, stagger: 0.08, duration: 1.1, ease: "expo.out", scrollTrigger: { trigger: el, start: "top 75%" } });
-      const distance = () => Math.max(0, tr.scrollWidth - tr.clientWidth);
-      if (distance() < 40) return;
-      // RTL row overflows to the left, so slide it rightwards as the user scrolls
-      gsap.to(tr.firstElementChild, {
-        x: () => distance(),
-        ease: "none",
-        scrollTrigger: { trigger: el, start: "center center", end: () => `+=${distance() * 1.2}`, pin: true, scrub: 0.6, invalidateOnRefresh: true },
-      });
     });
     return () => mm.revert();
   }, []);
@@ -123,9 +115,9 @@ export default function TextsShelf() {
     <section ref={root} className="relative overflow-hidden py-10" aria-label="رف القراءة والاستيعاب">
       <div className="mx-auto mb-6 flex max-w-7xl items-center justify-between px-4 font-display text-sm text-cream/50 sm:px-6">
         <span>اضغط على كعب الكتاب لفتحه</span>
-        <span className="hidden sm:inline">مرّر لتتصفح الرف ←</span>
+        <span className="hidden sm:inline">اسحب الرف أفقيًا ←</span>
       </div>
-      <div ref={track} className="no-scrollbar overflow-x-auto motion-safe:overflow-x-hidden">
+      <div ref={track} className="no-scrollbar overflow-x-auto overscroll-x-contain">
         <div className="flex w-max items-end gap-3 px-6 pb-0 sm:px-[8vw]">
           {textMeta.map((m, i) => (
             <Book key={m.slug} m={m} i={i} pct={lessonPercent(store, "texts", texts.lessons[i])} />

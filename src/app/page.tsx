@@ -9,12 +9,12 @@ const MARQUEE = ["ء", "،", "؛", "؟", "!", "«»", "﴿﴾", "ـــ", "…",
 const FEATURES = [
   { n: "22", t: "درسًا ونصًّا", d: "منهج متكامل في أربع وحدات." },
   { n: "10", t: "تفاعلات حيّة", d: "حاسبة الهمزة، ولعبة الأدلة، وشجرة البلاغة، وغيرها." },
-  { n: "∞", t: "اختبارات قصيرة", d: "اختبار في نهاية كل درس، ونتيجتك تُحفظ." },
+  { n: "∞", t: "اختبارات قصيرة", d: "اختبار في نهاية كل درس، ونتيجتك تظهر فورًا." },
 ];
 
 export default function Home() {
   return (
-    <>
+    <div className="snap-home">
       <Hero />
 
       {/* marquee */}
@@ -29,7 +29,7 @@ export default function Home() {
         <style>{`@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(33.333%)}}`}</style>
       </div>
 
-      <section id="units" className="relative mx-auto max-w-7xl scroll-mt-24 px-4 py-28 sm:px-6">
+      <section id="units" className="snap-start relative mx-auto max-w-7xl scroll-mt-24 px-4 py-28 sm:px-6">
         <div className="mb-14 flex flex-wrap items-end justify-between gap-6">
           <h2 className="font-display text-[clamp(2.8rem,8vw,6.5rem)] font-black leading-none">
             <SplitText text="أربع وحدات" onScroll className="block" />
@@ -44,7 +44,7 @@ export default function Home() {
 
       <StoryPinned />
 
-      <section className="mx-auto max-w-7xl px-4 py-28 sm:px-6">
+      <section className="snap-start mx-auto max-w-7xl px-4 py-28 sm:px-6">
         <div className="grid gap-5 md:grid-cols-3">
           {FEATURES.map((f, i) => (
             <Reveal key={f.t} delay={i * 0.1}>
@@ -57,6 +57,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-    </>
+    </div>
   );
 }

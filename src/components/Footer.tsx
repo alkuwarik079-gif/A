@@ -18,7 +18,7 @@ const TEAM = [
 
 export default function Footer() {
   return (
-    <footer className="relative mt-24 overflow-hidden border-t border-cream/10">
+    <footer className="snap-end relative mt-24 overflow-hidden border-t border-cream/10">
       <div className="pattern-khatam pointer-events-none absolute inset-0 opacity-[0.06]" />
       <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 md:grid-cols-[1.5fr_1fr_1fr]">
         <div>

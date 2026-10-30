@@ -57,12 +57,10 @@ export default function SplitText({ text, as: Tag = "span", className, delay = 0
     const ctx = gsap.context(() => {
       gsap.fromTo(
         chars,
-        { yPercent: 110, opacity: 0, rotateZ: -8, filter: "blur(8px)" },
+        { yPercent: 110, opacity: 0 },
         {
           yPercent: 0,
           opacity: 1,
-          rotateZ: 0,
-          filter: "blur(0px)",
           duration: 1.1,
           ease: "expo.out",
           stagger,

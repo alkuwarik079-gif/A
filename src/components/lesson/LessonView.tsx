@@ -45,8 +45,11 @@ export default function LessonView({ unitSlug, lessonSlug }: { unitSlug: string;
 
   // keep the active tab visible in the horizontal strip
   useEffect(() => {
-    const btn = tabsRef.current?.querySelector<HTMLElement>(`[data-tab="${active}"]`);
-    btn?.scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" });
+    const strip = tabsRef.current;
+    const btn = strip?.querySelector<HTMLElement>(`[data-tab="${active}"]`);
+    if (!strip || !btn) return;
+    const target = btn.offsetLeft - (strip.clientWidth - btn.offsetWidth) / 2;
+    strip.scrollTo({ left: target, behavior: "smooth" });
   }, [active]);
 
   // pinned sections measure before fonts/transitions settle — re-measure once things land
@@ -59,7 +62,7 @@ export default function LessonView({ unitSlug, lessonSlug }: { unitSlug: string;
   const isText = unit.slug === "texts";
 
   return (
-    <article className="relative">
+    <article className="snap-lesson relative">
       {/* header */}
       <header className="relative overflow-hidden pb-14 pt-[calc(var(--nav-h)+3.5rem)]">
         <div className="pattern-khatam pointer-events-none absolute inset-0 opacity-[0.06] [mask-image:linear-gradient(to_bottom,black,transparent)]" />
@@ -94,7 +97,7 @@ export default function LessonView({ unitSlug, lessonSlug }: { unitSlug: string;
       </header>
 
       {/* sticky tabs + reading progress */}
-      <div className="sticky z-40 border-y border-cream/10 bg-ink/85 backdrop-blur-xl" style={{ top: "var(--nav-h)" }}>
+      <div className="sticky z-40 border-y border-cream/10 bg-ink/95" style={{ top: "var(--nav-h)" }}>
         <div ref={tabsRef} className="no-scrollbar mx-auto flex max-w-6xl gap-1 overflow-x-auto px-4 py-2 sm:px-6" role="tablist" aria-label="أقسام الدرس">
           {tabs.map((t, i) => {
             const on = active === t.id;
@@ -124,7 +127,7 @@ export default function LessonView({ unitSlug, lessonSlug }: { unitSlug: string;
       {/* sections */}
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {lesson.sections.map((s, i) => (
-          <section key={s.id} id={s.id} className="relative border-b border-cream/[0.07] py-20 sm:py-28" aria-labelledby={`${s.id}-h`}>
+          <section key={s.id} id={s.id} className="snap-start relative border-b border-cream/[0.07] py-20 sm:py-28" aria-labelledby={`${s.id}-h`}>
             <div className="mb-10 flex items-start gap-5">
               <span aria-hidden className="font-display text-[4.5rem] font-black leading-[0.8] text-emerald-deep sm:text-[7rem]">
                 {String(i + 1).padStart(2, "0")}
@@ -140,7 +143,7 @@ export default function LessonView({ unitSlug, lessonSlug }: { unitSlug: string;
           </section>
         ))}
 
-        <section id="quiz" className="py-20 sm:py-28" aria-labelledby="quiz-h">
+        <section id="quiz" className="snap-start py-20 sm:py-28" aria-labelledby="quiz-h">
           <p className="font-display text-sm font-black text-leaf">ختام الدرس</p>
           <h2 id="quiz-h" className="mb-10 mt-1 font-display text-3xl font-black sm:text-5xl">اختبر فهمك</h2>
           <Quiz unit={unit.slug} lesson={lesson.slug} questions={lesson.quiz} />

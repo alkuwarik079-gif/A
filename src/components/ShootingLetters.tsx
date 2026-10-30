@@ -8,7 +8,7 @@ function rand(seed: number) {
   return x - Math.floor(x);
 }
 
-const STREAKS = Array.from({ length: 18 }, (_, i) => ({
+const STREAKS = Array.from({ length: 12 }, (_, i) => ({
   letter: LETTERS[(i * 7) % LETTERS.length],
   top: rand(i + 1) * 70 - 5, // %
   left: 35 + rand(i + 11) * 75, // %
@@ -37,12 +37,12 @@ export default function ShootingLetters() {
         <div key={i} className="absolute" style={{ top: `${s.top}%`, left: `${s.left}%`, transform: `rotate(${s.angle}deg)` }}>
           <div
             dir="ltr"
-            className="shoot-run flex items-center"
+            className="shoot-run flex items-center will-change-transform"
             style={{ ["--dur" as string]: `${s.dur}s`, ["--delay" as string]: `${s.delay}s` }}
           >
             <span
               className="font-display font-bold leading-none text-lime"
-              style={{ fontSize: `${s.size}rem`, textShadow: "0 0 18px rgba(138,21,56,.35)", transform: `rotate(${-s.angle}deg)`, display: "inline-block" }}
+              style={{ fontSize: `${s.size}rem`, transform: `rotate(${-s.angle}deg)`, display: "inline-block" }}
             >
               {s.letter}
             </span>

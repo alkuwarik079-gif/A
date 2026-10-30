@@ -88,7 +88,7 @@ export default function PunctuationGame() {
       </ol>
 
       {/* palette */}
-      <div className="sticky bottom-4 z-10 mt-6 flex flex-wrap justify-center gap-2 rounded-2xl border border-lime/20 bg-ink/90 p-3 backdrop-blur-xl">
+      <div className="sticky bottom-4 z-10 mt-6 flex flex-wrap justify-center gap-2 rounded-2xl border border-lime/20 bg-ink p-3">
         {MARKS.map((m) => (
           <button
             key={m}

@@ -130,13 +130,6 @@ body {
   color: transparent;
 }
 
-/* Section snapping: each swipe settles on the next section.
-   Home snaps firmly; lesson pages snap gently so long sections can still be read freely. */
-html:has(.snap-home) { scroll-snap-type: y mandatory; scroll-padding-top: 0; }
-html:has(.snap-lesson) { scroll-snap-type: y proximity; scroll-padding-top: calc(var(--nav-h) + 52px); }
-.snap-start { scroll-snap-align: start; }
-.snap-end { scroll-snap-align: end; }
-
 /* Letter spans used by SplitText keep their cursive joins via ZWJ */
 .split-word { display: inline-block; white-space: nowrap; }
 .split-char { display: inline-block; will-change: transform, opacity; }

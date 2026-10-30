@@ -3,7 +3,7 @@ import type { Unit } from "../types";
 export const writing: Unit = {
   slug: "writing",
   num: 1,
-  title: "الإنتاج الكتابي",
+  title: "مهارة الكتابة",
   short: "الكتابة",
   english: "Writing",
   tagline: "من الفكرة إلى المقال: أساليب، وبناء، وتلخيص، وتعليق، وأدلة.",

@@ -87,13 +87,12 @@ body {
 
 /* eight-pointed star (khatam) geometric lattice */
 .pattern-khatam {
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'><g fill='none' stroke='%238A1538' stroke-width='.8' opacity='.5'><rect x='28' y='28' width='40' height='40'/><rect x='28' y='28' width='40' height='40' transform='rotate(45 48 48)'/><circle cx='48' cy='48' r='9'/><path d='M0 0 L20 20 M96 0 L76 20 M0 96 L20 76 M96 96 L76 76 M48 0 V8 M48 96 V88 M0 48 H8 M96 48 H88'/></g></svg>");
-  background-size: 96px 96px;
+  background-image: radial-gradient(circle, rgba(138, 21, 56, 0.35) 1px, transparent 1.4px);
+  background-size: 28px 28px;
 }
 
 .pattern-girih {
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'><path d='M30 0 L38 22 L60 30 L38 38 L30 60 L22 38 L0 30 L22 22 Z' fill='none' stroke='%238A1538' stroke-width='.6' opacity='.35'/></svg>");
-  background-size: 60px 60px;
+  background-image: repeating-linear-gradient(135deg, rgba(138, 21, 56, 0.12) 0 1px, transparent 1px 14px);
 }
 
 /* Ivory "paper" panels: inside them the ink/text tokens flip back to dark-on-light */

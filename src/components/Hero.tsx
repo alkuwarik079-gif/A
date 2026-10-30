@@ -4,7 +4,7 @@ import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion
 import { useRef } from "react";
 import SplitText from "./SplitText";
 import Magnetic from "./Magnetic";
-import HeroOrnament from "./HeroOrnament";
+import ShootingLetters from "./ShootingLetters";
 
 
 
@@ -22,6 +22,7 @@ export default function Hero() {
       {/* backdrop */}
       <div className="pattern-khatam pointer-events-none absolute inset-0 opacity-[0.07] [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)]" />
       <div className="pointer-events-none absolute left-1/2 top-[45%] h-[70vmin] w-[70vmin] -translate-x-1/2 -translate-y-1/2 rounded-full bg-leaf/20 blur-[120px]" />
+      <ShootingLetters />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-ink to-transparent" />
 
       <div className="relative mx-auto grid min-h-[calc(100svh-var(--nav-h))] max-w-7xl items-center gap-6 px-4 sm:px-6 lg:grid-cols-[1fr_1.1fr]">
@@ -58,9 +59,8 @@ export default function Hero() {
 
         <motion.div
           style={reduce ? undefined : { y: sceneY, scale: sceneScale }}
-          className="relative order-1 h-[52svh] min-h-[340px] lg:order-2 lg:h-[82svh]"
+          className="relative order-1 h-[28svh] lg:order-2 lg:h-[82svh]"
         >
-          <HeroOrnament />
         </motion.div>
       </div>
 

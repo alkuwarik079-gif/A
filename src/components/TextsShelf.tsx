@@ -57,7 +57,7 @@ function Book({ m, i, pct }: { m: Meta; i: number; pct: number }) {
             style={{ background: `linear-gradient(90deg, ${m.spine} 0%, color-mix(in srgb, ${m.spine} 70%, white) 50%, ${m.spine} 100%)` }}
           >
             <span className="h-px w-3/4 bg-[#E9D3A6]/70" />
-            <span className="font-kufi text-lg text-[#E9D3A6]">۞</span>
+            <span className="h-1.5 w-1.5 rounded-full bg-[#E9D3A6]" />
             <span className="font-display text-[1.35rem] font-black text-white [writing-mode:vertical-rl]">{m.title}</span>
             <span className="font-display text-[11px] text-white/70 [writing-mode:vertical-rl]">{m.author.split("—")[0]}</span>
             <span className="h-px w-3/4 bg-[#E9D3A6]/70" />

@@ -1,4 +1,4 @@
-# للغة العربية — Arabic Language Skills (Grade 10/11)
+# للغة العربية — Arabic Language Skills
 
 Next.js 16 · Tailwind CSS 4 · React Three Fiber · GSAP ScrollTrigger · Framer Motion
 

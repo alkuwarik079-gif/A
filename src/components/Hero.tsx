@@ -33,19 +33,11 @@ export default function Hero() {
 
       <div className="relative mx-auto grid min-h-[calc(100svh-var(--nav-h))] max-w-7xl items-center gap-6 px-4 sm:px-6 lg:grid-cols-[1fr_1.1fr]">
         <motion.div style={reduce ? undefined : { y: textY, opacity: fade }} className="relative z-10 order-2 pb-16 lg:order-1 lg:pb-0">
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            className="mb-5 inline-flex items-center gap-2 rounded-full border border-leaf/30 bg-emerald-deep/30 px-4 py-1.5 font-display text-sm font-bold text-lime"
-          >
-            <span className="h-2 w-2 animate-pulse rounded-full bg-leaf" />
-            مهارات اللغة العربية · الصفان العاشر والحادي عشر
-          </motion.p>
-
           <h1 className="font-display font-black leading-[0.95] tracking-tight">
-            <SplitText text="«لغتي" className="block text-[clamp(4.2rem,15vw,11rem)] text-cream" delay={0.5} />
-            <SplitText text="هويتي»" className="text-glow block text-[clamp(4.2rem,15vw,11rem)] text-lime" delay={0.75} />
+            <span dir="ltr" className="block whitespace-nowrap text-right">
+              <SplitText text="Arabic 100" className="block text-[clamp(3.2rem,11vw,7.5rem)] text-cream" delay={0.5} />
+            </span>
+            <SplitText text="عربي١٠٠" className="text-glow block text-[clamp(4.2rem,15vw,11rem)] text-lime" delay={0.75} />
           </h1>
 
           <motion.p
@@ -54,7 +46,7 @@ export default function Hero() {
             transition={{ delay: 1.3, duration: 0.9 }}
             className="mt-8 max-w-lg text-lg leading-loose text-cream/75 sm:mt-12 sm:text-xl"
           >
-            رحلةٌ من الحرف إلى النص: اكتب بثقة، وتذوّق البيان، وأتقن القواعد والإملاء، واقرأ النصوص بعين الناقد.
+            رحلةٌ من الحرف إلى النص: اكتب بثقة، وتذوّق البيان، وأتقن القواعد والإملاء، واقرأ بفهمٍ واستيعاب.
           </motion.p>
 
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.6 }} className="mt-10 flex flex-wrap items-center gap-4">

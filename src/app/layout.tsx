@@ -9,8 +9,8 @@ const naskh = Noto_Naskh_Arabic({ subsets: ["arabic"], weight: ["400", "500", "7
 const reem = Reem_Kufi({ subsets: ["arabic"], weight: ["400", "700"], variable: "--font-reem", display: "swap" });
 
 export const metadata: Metadata = {
-  title: "للغة العربية — منصة مهارات اللغة العربية للصفين العاشر والحادي عشر",
-  description: "منصة تعليمية تفاعلية لمهارات اللغة العربية للصفين العاشر والحادي عشر: الكتابة، والبلاغة، والقواعد والإملاء، والنصوص.",
+  title: "عربي١٠٠ — Arabic 100",
+  description: "منصة تعليمية تفاعلية لمهارات اللغة العربية: الكتابة، والبلاغة، والقواعد والإملاء، والقراءة والاستيعاب.",
 };
 
 export const viewport: Viewport = {

@@ -13,7 +13,7 @@ const SEGMENTS = 28;
 /* ─────────── Canvas textures ─────────── */
 
 const LINES = [
-  "لغتي هويتي، وفي حروفها ذاكرة أمة",
+  "لغتي العربية، وفي حروفها ذاكرة أمة",
   "الكلمة الطيبة كشجرة طيبة أصلها ثابت",
   "ومن الحروف تُبنى الجملة، ومن الجمل يُبنى المعنى",
   "العلم نورٌ، والقراءة سراجه الذي لا ينطفئ",
@@ -54,7 +54,7 @@ function paperTexture(fontFamily: string, seed: number) {
   g.textAlign = "center";
   g.fillStyle = "#0F5132";
   g.font = `700 64px ${fontFamily}`;
-  g.fillText(seed % 2 ? "لغتي هويتي" : "البيان", c.width / 2, 170);
+  g.fillText(seed % 2 ? "عربي١٠٠" : "البيان", c.width / 2, 170);
   g.fillStyle = "rgba(15,81,50,.8)";
   g.fillText("۞", c.width / 2, 240);
   // body text

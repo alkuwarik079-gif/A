@@ -120,7 +120,7 @@ export default function TextsShelf() {
   }, []);
 
   return (
-    <section ref={root} className="relative overflow-hidden py-10" aria-label="رف النصوص">
+    <section ref={root} className="relative overflow-hidden py-10" aria-label="رف القراءة والاستيعاب">
       <div className="mx-auto mb-6 flex max-w-7xl items-center justify-between px-4 font-display text-sm text-cream/50 sm:px-6">
         <span>اضغط على كعب الكتاب لفتحه</span>
         <span className="hidden sm:inline">مرّر لتتصفح الرف ←</span>

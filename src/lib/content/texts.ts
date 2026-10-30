@@ -371,8 +371,8 @@ export const textMeta = specs.map((s) => ({ slug: s.slug, title: s.title, author
 export const texts: Unit = {
   slug: "texts",
   num: 4,
-  title: "النصوص",
-  short: "النصوص",
+  title: "القراءة والاستيعاب",
+  short: "القراءة والاستيعاب",
   english: "Reading Texts",
   tagline: "رفٌّ من ثمانية نصوص: افتح الكتاب، واقرأ الفكرة، والمعجم، والصورة، والدليل.",
   glyph: "ن",

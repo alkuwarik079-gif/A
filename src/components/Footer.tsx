@@ -18,7 +18,7 @@ export default function Footer() {
           <p className="font-display text-5xl font-black leading-none sm:text-7xl">
             للغة <span className="text-outline">العربية</span>
           </p>
-          <p className="mt-5 max-w-md text-cream/60">منصة مراجعة تفاعلية لمهارات اللغة العربية للمرحلة الثانوية (الصفان العاشر والحادي عشر).</p>
+          <p className="mt-5 max-w-md text-cream/60">منصة مراجعة تفاعلية لمهارات اللغة العربية.</p>
         </div>
         <div>
           <h2 className="mb-4 font-display text-sm font-bold text-leaf">الوحدات</h2>

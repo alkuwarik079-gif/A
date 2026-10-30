@@ -44,7 +44,7 @@ export default function Footer() {
         </div>
         <div>
           <h2 className="mb-4 font-display text-sm font-bold text-leaf">تقدّمك</h2>
-          <p className="text-sm text-cream/60">يُحفظ تقدمك في هذا المتصفح فقط.</p>
+          <p className="text-sm text-cream/60">يبدأ تقدمك من الصفر في كل زيارة جديدة.</p>
           <button
             type="button"
             onClick={() => {

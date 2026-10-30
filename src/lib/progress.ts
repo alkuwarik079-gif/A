@@ -12,10 +12,12 @@ const listeners = new Set<() => void>();
 let cache: Store | null = null;
 const EMPTY: Store = {};
 
+// Progress lasts only for the current visit (this tab): every new visit starts from 0%.
 function read(): Store {
   if (cache) return cache;
   try {
-    cache = JSON.parse(localStorage.getItem(KEY) || "{}") as Store;
+    localStorage.removeItem(KEY); // clear progress saved by earlier versions of the site
+    cache = JSON.parse(sessionStorage.getItem(KEY) || "{}") as Store;
   } catch {
     cache = {};
   }
@@ -25,7 +27,7 @@ function read(): Store {
 function write(next: Store) {
   cache = next;
   try {
-    localStorage.setItem(KEY, JSON.stringify(next));
+    sessionStorage.setItem(KEY, JSON.stringify(next));
   } catch {
     /* storage may be unavailable (private mode) — progress stays in memory */
   }
@@ -34,16 +36,8 @@ function write(next: Store) {
 
 function subscribe(cb: () => void) {
   listeners.add(cb);
-  const onStorage = (e: StorageEvent) => {
-    if (e.key === KEY) {
-      cache = null;
-      cb();
-    }
-  };
-  window.addEventListener("storage", onStorage);
   return () => {
     listeners.delete(cb);
-    window.removeEventListener("storage", onStorage);
   };
 }
 

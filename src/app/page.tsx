@@ -3,6 +3,7 @@ import UnitCards from "@/components/UnitCards";
 import StoryPinned from "@/components/StoryPinned";
 import SplitText from "@/components/SplitText";
 import Reveal from "@/components/Reveal";
+import SectionReveal from "@/components/SectionReveal";
 
 const MARQUEE = ["ء", "،", "؛", "؟", "!", "«»", "﴿﴾", "ـــ", "…", ":", "ض", "البيان", "الإملاء", "النحو", "البلاغة"];
 
@@ -30,6 +31,7 @@ export default function Home() {
       </div>
 
       <section id="units" className="snap-start relative mx-auto max-w-7xl scroll-mt-24 px-4 py-28 sm:px-6">
+        <SectionReveal>
         <div className="mb-14 flex flex-wrap items-end justify-between gap-6">
           <h2 className="font-display text-[clamp(2.8rem,8vw,6.5rem)] font-black leading-none">
             <SplitText text="أربع وحدات" onScroll className="block" />
@@ -40,11 +42,13 @@ export default function Home() {
           </Reveal>
         </div>
         <UnitCards />
+        </SectionReveal>
       </section>
 
       <StoryPinned />
 
       <section className="snap-start mx-auto max-w-7xl px-4 py-28 sm:px-6">
+        <SectionReveal>
         <div className="grid gap-5 md:grid-cols-3">
           {FEATURES.map((f, i) => (
             <Reveal key={f.t} delay={i * 0.1}>
@@ -56,6 +60,7 @@ export default function Home() {
             </Reveal>
           ))}
         </div>
+        </SectionReveal>
       </section>
     </div>
   );

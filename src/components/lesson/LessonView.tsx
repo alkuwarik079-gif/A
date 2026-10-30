@@ -9,6 +9,7 @@ import { lessonPercent, markSeen, useProgress } from "@/lib/progress";
 import SplitText from "../SplitText";
 import Blocks from "./Blocks";
 import Quiz from "./Quiz";
+import SectionReveal from "../SectionReveal";
 
 export default function LessonView({ unitSlug, lessonSlug }: { unitSlug: string; lessonSlug: string }) {
   const data = getLesson(unitSlug, lessonSlug)!;
@@ -128,6 +129,7 @@ export default function LessonView({ unitSlug, lessonSlug }: { unitSlug: string;
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {lesson.sections.map((s, i) => (
           <section key={s.id} id={s.id} className="snap-start relative border-b border-cream/[0.07] py-20 sm:py-28" aria-labelledby={`${s.id}-h`}>
+            <SectionReveal>
             <div className="mb-10 flex items-start gap-5">
               <span aria-hidden className="font-display text-[4.5rem] font-black leading-[0.8] text-emerald-deep sm:text-[7rem]">
                 {String(i + 1).padStart(2, "0")}
@@ -140,13 +142,16 @@ export default function LessonView({ unitSlug, lessonSlug }: { unitSlug: string;
               </div>
             </div>
             <Blocks blocks={s.blocks} />
+            </SectionReveal>
           </section>
         ))}
 
         <section id="quiz" className="snap-start py-20 sm:py-28" aria-labelledby="quiz-h">
           <p className="font-display text-sm font-black text-leaf">ختام الدرس</p>
           <h2 id="quiz-h" className="mb-10 mt-1 font-display text-3xl font-black sm:text-5xl">اختبر فهمك</h2>
-          <Quiz unit={unit.slug} lesson={lesson.slug} questions={lesson.quiz} />
+          <SectionReveal>
+            <Quiz unit={unit.slug} lesson={lesson.slug} questions={lesson.quiz} />
+          </SectionReveal>
         </section>
 
         {/* prev / next */}

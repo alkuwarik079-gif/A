@@ -8,13 +8,13 @@ function rand(seed: number) {
   return x - Math.floor(x);
 }
 
-const STREAKS = Array.from({ length: 12 }, (_, i) => ({
+const STREAKS = Array.from({ length: 16 }, (_, i) => ({
   letter: LETTERS[(i * 7) % LETTERS.length],
   top: rand(i + 1) * 70 - 5, // %
   left: 35 + rand(i + 11) * 75, // %
   size: 1.4 + rand(i + 21) * 2.2, // rem
   dur: 2.6 + rand(i + 31) * 2.4, // s
-  delay: rand(i + 41) * 9, // s
+  delay: rand(i + 41) * 5, // s
   tail: 90 + rand(i + 51) * 160, // px
   angle: -(22 + rand(i + 61) * 14), // deg
 }));

@@ -1,9 +1,0 @@
-:HL["/arabic100/_next/static/chunks/3-z9ou5m6tyjr.css","style"]
-:HL["/arabic100/_next/static/media/08dcbd34c750fee1-s.p.02wf5pyqc9u1m.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/arabic100/_next/static/media/851a1125fe719f9c-s.p.28v825rc0jjx9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/arabic100/_next/static/media/a64e50fcc092fc14-s.p.35jxqqhqnr05h.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/arabic100/_next/static/media/e38380bd8738cc29-s.p.18k4kwlm9wh3m.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-3:[["children",{"s":"__PAGE__","h":160}]]
-2:[["children",{"s":{"n":"lesson","t":"d","k":"essay-styles","s":[]},"h":96,"c":"$Q3"}]]
-1:[["children",{"s":{"n":"unit","t":"d","k":"writing","s":[]},"h":96,"c":"$Q2"}]]
-0:{"b":"qSGcSiHCvZ-8XTvPb3ZTU","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

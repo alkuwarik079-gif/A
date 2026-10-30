@@ -130,6 +130,72 @@ body {
   color: transparent;
 }
 
+/* ---------- Opening curtain ---------- */
+.intro-splash {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 50% 45%, #A8405C, #8A1538 45%, #5C0E25);
+  color: #fff;
+  pointer-events: none;
+  animation: intro-close 0.9s cubic-bezier(0.76, 0, 0.24, 1) 1.9s forwards;
+}
+.intro-inner { text-align: center; }
+.intro-ar {
+  font-size: clamp(4rem, 18vw, 9rem);
+  font-weight: 900;
+  line-height: 1.1;
+  opacity: 0;
+  animation: intro-rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+}
+.intro-en {
+  font-size: clamp(1rem, 4vw, 1.6rem);
+  letter-spacing: 0.5em;
+  opacity: 0;
+  animation: intro-rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.55s forwards;
+}
+.intro-line {
+  display: block;
+  height: 2px;
+  margin: 1.2rem auto 0;
+  width: 0;
+  background: linear-gradient(90deg, transparent, #E9D3A6, transparent);
+  animation: intro-line 0.9s ease 0.9s forwards;
+}
+@keyframes intro-rise { from { opacity: 0; transform: translateY(40px); filter: blur(10px); } to { opacity: 1; transform: none; filter: none; } }
+@keyframes intro-line { to { width: min(60vw, 320px); } }
+@keyframes intro-close { from { clip-path: circle(150% at 50% 50%); } to { clip-path: circle(0% at 50% 50%); visibility: hidden; } }
+.no-intro .intro-splash { display: none; }
+
+/* ---------- Tap ripple ---------- */
+.tap-ripple {
+  position: fixed;
+  z-index: 95;
+  width: 14px;
+  height: 14px;
+  margin: -7px 0 0 -7px;
+  border-radius: 9999px;
+  border: 2px solid rgba(138, 21, 56, 0.55);
+  background: rgba(138, 21, 56, 0.12);
+  pointer-events: none;
+  animation: tap-ripple 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes tap-ripple { to { transform: scale(7); opacity: 0; } }
+
+/* ---------- Gold shine clipped to headline letters ---------- */
+.sheen {
+  color: transparent;
+  background: linear-gradient(105deg, transparent 38%, rgba(255, 236, 200, 0.95) 48%, rgba(233, 211, 166, 0.9) 52%, transparent 62%);
+  background-size: 260% 100%;
+  background-position: 130% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: sheen 4.5s ease-in-out infinite;
+}
+@keyframes sheen { 0% { background-position: 130% 0; } 40%, 100% { background-position: -130% 0; } }
+
 /* Letter spans used by SplitText keep their cursive joins via ZWJ */
 .split-word { display: inline-block; white-space: nowrap; }
 .split-char { display: inline-block; will-change: transform, opacity; }
@@ -181,6 +247,7 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .intro-splash, .sheen { display: none; }
   .grain::after { animation: none; }
   *, *::before, *::after {
     animation-duration: 0.001ms !important;

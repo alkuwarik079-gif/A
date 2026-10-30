@@ -12,7 +12,7 @@ const STREAKS = Array.from({ length: 16 }, (_, i) => ({
   letter: LETTERS[(i * 7) % LETTERS.length],
   top: rand(i + 1) * 70 - 5, // %
   left: 35 + rand(i + 11) * 75, // %
-  size: 1.4 + rand(i + 21) * 2.2, // rem
+  size: 1.2 + rand(i + 21) * 1.8, // rem
   dur: 2.6 + rand(i + 31) * 2.4, // s
   delay: rand(i + 41) * 5, // s
   tail: 90 + rand(i + 51) * 160, // px
@@ -26,8 +26,8 @@ export default function ShootingLetters() {
       <style>{`
         @keyframes shoot {
           0% { transform: translateX(0); opacity: 0; }
-          8% { opacity: 1; }
-          70% { opacity: 1; }
+          8% { opacity: .6; }
+          70% { opacity: .6; }
           100% { transform: translateX(-120vmax); opacity: 0; }
         }
         .shoot-run { animation: shoot var(--dur) cubic-bezier(.35,.1,.6,1) var(--delay) infinite; opacity: 0; }

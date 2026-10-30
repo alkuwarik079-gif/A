@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { Cairo, Noto_Naskh_Arabic, Reem_Kufi } from "next/font/google";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import IntroSplash, { introSkipScript } from "@/components/IntroSplash";
+import TapRipple from "@/components/TapRipple";
 import "./globals.css";
 
 const cairo = Cairo({ subsets: ["arabic", "latin"], weight: ["400", "700", "900"], variable: "--font-cairo", display: "swap" });
@@ -21,8 +23,13 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ar" dir="rtl" className={`${cairo.variable} ${naskh.variable} ${reem.variable}`}>
+    <html lang="ar" dir="rtl" suppressHydrationWarning className={`${cairo.variable} ${naskh.variable} ${reem.variable}`}>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: introSkipScript }} />
+      </head>
       <body className="grain antialiased">
+        <IntroSplash />
+        <TapRipple />
         <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:right-4 focus:top-4 focus:z-[70] focus:rounded-lg focus:bg-lime focus:px-4 focus:py-2 focus:text-ink">
           تخطَّ إلى المحتوى
         </a>

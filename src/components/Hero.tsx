@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import SplitText from "./SplitText";
 import Magnetic from "./Magnetic";
 import ShootingLetters from "./ShootingLetters";
@@ -11,6 +11,8 @@ import ShootingLetters from "./ShootingLetters";
 export default function Hero() {
   const reduce = !!useReducedMotion();
   const ref = useRef<HTMLElement>(null);
+  // wait for the opening curtain only when it is actually playing (first page of a visit)
+  const [d] = useState(() => (typeof document !== "undefined" && document.documentElement.classList.contains("no-intro") ? 0 : 1.9));
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const sceneY = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
   const sceneScale = useTransform(scrollYProgress, [0, 1], [1, 0.85]);
@@ -29,21 +31,27 @@ export default function Hero() {
         <motion.div style={reduce ? undefined : { y: textY, opacity: fade }} className="relative z-10 order-2 pb-16 lg:order-1 lg:pb-0">
           <h1 className="font-display font-black leading-[0.95] tracking-tight">
             <span dir="ltr" className="block whitespace-nowrap text-right">
-              <SplitText text="Arabic 100" className="block text-[clamp(3.2rem,11vw,7.5rem)] text-cream" delay={0.5} />
+              <SplitText text="Arabic 100" className="block text-[clamp(3.2rem,11vw,7.5rem)] text-cream" delay={d + 0.5} />
             </span>
-            <SplitText text="عربي١٠٠" className="text-glow block text-[clamp(4.2rem,15vw,11rem)] text-lime" delay={0.75} />
+            <span className="relative block text-[clamp(4.2rem,15vw,11rem)]">
+              <SplitText text="عربي١٠٠" className="block text-lime" delay={d + 0.85} stagger={0.08} />
+              {/* gold shine that glides across the letters only */}
+              <span aria-hidden className="sheen pointer-events-none absolute inset-0 block" style={{ animationDelay: `${d + 2}s` }}>
+                عربي١٠٠
+              </span>
+            </span>
           </h1>
 
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.3, duration: 0.9 }}
+            transition={{ delay: d + 1.2, duration: 0.9 }}
             className="mt-10 max-w-lg text-lg leading-loose text-cream/75 sm:mt-16 sm:text-xl"
           >
             رحلةٌ من الحرف إلى النص: اكتب بثقة، وتذوّق البيان، وأتقن القواعد والإملاء، واقرأ بفهمٍ واستيعاب.
           </motion.p>
 
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.6 }} className="mt-10 flex flex-wrap items-center gap-4">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: d + 1.5 }} className="mt-10 flex flex-wrap items-center gap-4">
             <Magnetic
               href="/writing"
               className="rounded-full bg-lime px-9 py-4 font-display text-lg font-black text-ink shadow-[0_0_0_0_#A8405C] transition-shadow duration-500 hover:shadow-[0_0_60px_-5px_#A8405C]"

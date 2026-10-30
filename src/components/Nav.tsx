@@ -4,7 +4,7 @@ import Image from "next/image";
 import quLogo from "../../public/qu-logo.webp";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
 import { useEffect, useState } from "react";
 import { units } from "@/lib/content";
 import { unitPercent, useProgress } from "@/lib/progress";
@@ -36,6 +36,8 @@ export default function Nav() {
   const store = useProgress();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { scrollYProgress } = useScroll();
+  const progress = useSpring(scrollYProgress, { stiffness: 140, damping: 30 });
 
   useEffect(() => {
     const on = () => setScrolled(window.scrollY > 24);
@@ -101,6 +103,11 @@ export default function Nav() {
           </span>
         </button>
       </nav>
+      <motion.span
+        aria-hidden
+        className="absolute inset-x-0 bottom-0 block h-[2px] origin-right bg-gradient-to-l from-lime via-leaf to-gold"
+        style={{ scaleX: progress }}
+      />
 
       <AnimatePresence>
         {open && (

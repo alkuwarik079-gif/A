@@ -6,6 +6,16 @@ import Link from "next/link";
 import { units } from "@/lib/content";
 import { resetProgress } from "@/lib/progress";
 
+const TEAM = [
+  { name: "آمنة الكواري", id: "202602114" },
+  { name: "موزة الكواري", id: "202601803" },
+  { name: "شيخة النعيمي", id: "202602137" },
+  { name: "الريم اليافعي", id: "202601889" },
+  { name: "شيخة فخرو", id: "202602704" },
+  { name: "مريم عادل", id: "202602465" },
+  { name: "مريم الأحمد", id: "202601720" },
+];
+
 export default function Footer() {
   return (
     <footer className="relative mt-24 overflow-hidden border-t border-cream/10">
@@ -46,6 +56,17 @@ export default function Footer() {
           </button>
         </div>
       </div>
+      <section className="relative mx-auto max-w-7xl border-t border-cream/10 px-4 py-12 sm:px-6" aria-labelledby="team-h">
+        <h2 id="team-h" className="mb-6 font-display text-sm font-bold text-leaf">فريق العمل</h2>
+        <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {TEAM.map((m) => (
+            <li key={m.id} className="glow-hover flex items-center justify-between gap-3 rounded-2xl border border-cream/10 bg-ink-2 px-5 py-4">
+              <span className="font-display text-lg font-bold">{m.name}</span>
+              <span dir="ltr" className="font-display text-sm tabular-nums text-lime">{m.id}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
     </footer>
   );
 }

@@ -42,6 +42,12 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
 body {
   background: var(--bg);
   color: var(--fg);
@@ -142,17 +148,23 @@ body {
   pointer-events: none;
   animation: intro-close 0.9s cubic-bezier(0.76, 0, 0.24, 1) 1.9s forwards;
 }
-.intro-inner { text-align: center; }
+.intro-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1.4rem, 5vw, 2.2rem);
+  text-align: center;
+}
 .intro-ar {
   font-size: clamp(4rem, 18vw, 9rem);
   font-weight: 900;
-  /* tall line box so the dots under «ي» never touch the English line */
-  line-height: 1.6;
+  /* room below for the dots under «ي», so they never touch the English line */
+  line-height: 1.2;
+  padding-bottom: 0.3em;
   opacity: 0;
   animation: intro-rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
 }
 .intro-en {
-  margin-top: 0.4em;
   font-size: clamp(1rem, 4vw, 1.6rem);
   letter-spacing: 0.5em;
   opacity: 0;
@@ -161,7 +173,6 @@ body {
 .intro-line {
   display: block;
   height: 2px;
-  margin: 1.2rem auto 0;
   width: 0;
   background: linear-gradient(90deg, transparent, #E9D3A6, transparent);
   animation: intro-line 0.9s ease 0.9s forwards;

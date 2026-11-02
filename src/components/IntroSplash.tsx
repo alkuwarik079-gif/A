@@ -1,11 +1,14 @@
 /**
- * Opening curtain shown once per visit: the name writes itself in on maroon, then the
- * curtain closes into a circle to reveal the site. Pure CSS, so it finishes even if
+ * Opening curtain shown once per visit: the name rises in on maroon, a gold seam draws
+ * down the middle, and the maroon opens like two doors onto the site. Pure CSS, so it finishes even if
  * scripts are slow; an inline script in <head> skips it after the first page of a visit.
  */
 export default function IntroSplash() {
   return (
     <div className="intro-splash" aria-hidden>
+      <span className="intro-door r" />
+      <span className="intro-door l" />
+      <span className="intro-seam" />
       <div className="intro-inner">
         <p className="intro-ar font-display">عربي١٠٠</p>
         <p className="intro-en font-display" dir="ltr">

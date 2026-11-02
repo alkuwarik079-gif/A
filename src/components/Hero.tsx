@@ -12,7 +12,7 @@ export default function Hero() {
   const reduce = !!useReducedMotion();
   const ref = useRef<HTMLElement>(null);
   // wait for the opening curtain only when it is actually playing (first page of a visit)
-  const [d] = useState(() => (typeof document !== "undefined" && document.documentElement.classList.contains("no-intro") ? 0 : 1.9));
+  const [d] = useState(() => (typeof document !== "undefined" && document.documentElement.classList.contains("no-intro") ? 0 : 3.9));
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const sceneY = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
   const sceneScale = useTransform(scrollYProgress, [0, 1], [1, 0.85]);

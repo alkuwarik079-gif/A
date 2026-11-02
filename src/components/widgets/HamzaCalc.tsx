@@ -131,9 +131,11 @@ export default function HamzaCalc() {
                 </p>
                 {ex && (
                   <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }} className="mt-4 font-body text-4xl font-bold text-ink">
-                    {ex[0]}
-                    <span className="text-leaf [text-shadow:0_0_18px_rgba(138,21,56,0.25)]">{ex[1]}</span>
-                    {ex[2]}
+                    {/* the word stays one text run so its letters join on every browser */}
+                    {ex.join("")}
+                    <span className="mt-2 block font-display text-sm font-bold text-ink/60">
+                      الهمزة فيها: <span className="text-xl text-lime">{ex[1]}</span>
+                    </span>
                   </motion.p>
                 )}
               </motion.div>

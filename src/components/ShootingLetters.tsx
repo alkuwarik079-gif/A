@@ -22,12 +22,13 @@ const STREAKS = Array.from({ length: 16 }, (_, i) => ({
 /** Arabic letters streaking across the sky like shooting stars, each trailing a maroon tail. */
 export default function ShootingLetters() {
   return (
-    <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
+    // Kept clear of the headline: above it on phones, in the empty left half on desktop.
+    <div className="pointer-events-none absolute inset-x-0 top-0 h-[42%] overflow-hidden lg:right-auto lg:h-full lg:w-[52%]" aria-hidden>
       <style>{`
         @keyframes shoot {
           0% { transform: translateX(0); opacity: 0; }
-          8% { opacity: .6; }
-          70% { opacity: .6; }
+          8% { opacity: .5; }
+          70% { opacity: .5; }
           100% { transform: translateX(-120vmax); opacity: 0; }
         }
         .shoot-run { animation: shoot var(--dur) cubic-bezier(.35,.1,.6,1) var(--delay) infinite; opacity: 0; }

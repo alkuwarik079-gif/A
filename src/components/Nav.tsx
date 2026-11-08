@@ -57,8 +57,9 @@ export default function Nav() {
     >
       <nav className="mx-auto flex h-full max-w-7xl items-center justify-between gap-4 px-4 sm:px-6" aria-label="الوحدات">
         <Link href="/" className="group flex items-center gap-2.5" aria-label="الصفحة الرئيسة">
-          <span className="grid h-12 w-12 place-items-center rounded-xl border border-lime/15 bg-white p-1 shadow-[0_0_30px_-8px_#A8405C] transition-transform duration-500 group-hover:-rotate-3">
-            <Image src={quLogo} alt="جامعة قطر" priority className="h-full w-auto" />
+          <span className="grid h-12 w-12 shrink-0 place-items-center overflow-hidden rounded-xl border border-lime/15 bg-white p-1 shadow-[0_0_30px_-8px_#A8405C] transition-transform duration-500 group-hover:-rotate-3">
+            {/* fixed pixel size: Safari on iPad ignored a percentage height here and drew the logo full size */}
+            <Image src={quLogo} alt="جامعة قطر" priority className="block h-10 w-auto max-w-none object-contain" style={{ height: 40, width: "auto" }} />
           </span>
           <span className="font-display text-lg font-black tracking-tight">
             للغة <span className="text-leaf">العربية</span>

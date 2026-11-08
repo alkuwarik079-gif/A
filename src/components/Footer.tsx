@@ -23,7 +23,7 @@ export default function Footer() {
       <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 md:grid-cols-[1.5fr_1fr_1fr]">
         <div>
           <span className="mb-8 inline-block rounded-2xl border border-lime/15 bg-white p-3">
-            <Image src={quLogo} alt="جامعة قطر" className="h-24 w-auto" />
+            <Image src={quLogo} alt="جامعة قطر" className="block h-24 w-auto" style={{ height: 96, width: "auto" }} />
           </span>
           <p className="font-display text-5xl font-black leading-none sm:text-7xl">
             للغة <span className="text-outline">العربية</span>
